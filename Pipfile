@@ -1,0 +1,33 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+requests = "*"
+aiohttp = "*"
+arrow = "*"
+async-timeout = "*"
+bs4 = "*"
+cchardet = "*"
+gunicorn = "*"
+html5lib = "*"
+jinja2 = "==2.10.1"
+motor = "==1.1"
+numpy = "*"
+sanic = "*"
+sanic-session = "*"
+schedule = "*"
+pytest = "*"
+pymongo = "*"
+aiofiles = "*"
+pyquery = "*"
+ruia-ua = "*"
+aiocache = "==0.3.2"
+aioredis = "==0.3.3"
+asyncio-redis = "==0.14.3"
+
+[requires]
+python_version = "3.8"
