@@ -7,11 +7,11 @@ from aiocache.serializers import PickleSerializer, JsonSerializer
 
 from urllib.parse import urlparse, parse_qs, urljoin
 
-# from Easy.database.mongodb import MotorBase
+from Easy.database.mongoDB import MotorBase
 from Easy.fecher.decorator import cached
 from Easy.fecher.fetcher_function import target_fetch, get_time, get_html_by_requests, get_random_user_agent
 from Easy.fecher.obtain import extract_pre_next_chapter
-from Easy.config import LATEST_RULES, LOGGER
+from Easy.config import RULES, LATEST_RULES, LOGGER
 
 
 @cached(ttl=300, key_from_attr='url', serializer=PickleSerializer(), namespace="main")
