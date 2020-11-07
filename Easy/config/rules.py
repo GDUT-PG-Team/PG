@@ -21,3 +21,8 @@ LATEST_RULES = {
     "www.qidian.com": PLAN_01,
     "www.zongheng.com": PLAN_01
 }
+
+RULES = {
+    'www.biquwu.cc': Rules('https://www.biquwu.cc/', {'class': 'box_con'}, {'id': 'content'}),
+    'www.quyuege.com': Rules('0', {'class': 'mod-article-list'}, {'class': 'page-content'}),
+}
