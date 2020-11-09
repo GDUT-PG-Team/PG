@@ -4,7 +4,7 @@ import os
 
 class Config():
     """
-    Basic config for owllook
+    Basic config for Easy
     """
 
     # Application config
