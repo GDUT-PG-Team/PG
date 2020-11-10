@@ -1,11 +1,16 @@
 #!/usr/bin/env python
+
 import os
 
 
 class Config():
     """
+
     Basic config for Easy
     """
+
+
+
 
     # Application config
     DEBUG = True
@@ -37,3 +42,9 @@ class Config():
     REMOTE_SERVER = {
         'proxy_server': 'http://0.0.0.0:8002/'
     }
+
+
+    REMOTE_SERVER = {
+        'proxy_server': 'http://0.0.0.0:8002/'
+    }
+
