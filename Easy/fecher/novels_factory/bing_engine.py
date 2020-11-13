@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 
 from Easy.fecher.decorator import cached
 from Easy.fecher.fetcher_function import get_random_user_agent
-from Easy.fecher.base_engine import BaseNovels
+from Easy.fecher.novels_factory.base_engine import BaseNovels
 
 
 class BingNovels(BaseNovels):

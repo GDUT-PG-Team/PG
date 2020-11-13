@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from Easy.config import CONFIG
-from Easy.utils.tools import singleton
+from Easy.utils import singleton
 
 
 @singleton
