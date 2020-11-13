@@ -1,12 +1,13 @@
 import re
 import async_timeout
-
+import aiohttp
 from bs4 import BeautifulSoup
 from aiocache.serializers import PickleSerializer, JsonSerializer
 
 from urllib.parse import urlparse, parse_qs, urljoin
 
 from Easy.database import MotorBase
+
 from Easy.fecher.decorator import cached
 from Easy.fecher.fetcher_function import target_fetch, get_time, get_html_by_requests, get_random_user_agent
 from Easy.fecher.obtain import extract_pre_next_chapter
@@ -169,8 +170,8 @@ async def get_the_latest_chapter(chapter_url, timeout=15):
                         data = {
                             "latest_chapter_name": latest_chapter_name,
                             "latest_chapter_url": latest_chapter_url,
-                            "owllook_chapter_url": chapter_url,
-                            "owllook_content_url": "/owllook_content?url={latest_chapter_url}&name={name}&chapter_url={chapter_url}&novels_name={novels_name}".format(
+                            "Easy_chapter_url": chapter_url,
+                            "Easy_content_url": "/Easy_content?url={latest_chapter_url}&name={name}&chapter_url={chapter_url}&novels_name={novels_name}".format(
                                 latest_chapter_url=latest_chapter_url,
                                 name=latest_chapter_name,
                                 chapter_url=url,
@@ -180,7 +181,7 @@ async def get_the_latest_chapter(chapter_url, timeout=15):
                         # 存储最新章节
                         motor_db = MotorBase().get_db()
                         await motor_db.latest_chapter.update_one(
-                            {"novels_name": novels_name, 'owllook_chapter_url': chapter_url},
+                            {"novels_name": novels_name, 'Easy_chapter_url': chapter_url},
                             {'$set': {'data': data, "finished_at": time_current}}, upsert=True)
             return data
     except Exception as e:
