@@ -5,7 +5,7 @@ from .config import Config
 
 class DevConfig(Config):
     """
-    Dev config for owllook
+    Dev config for Easy
     """
 
     VAL_HOST = os.getenv('VAL_HOST', 'false')
