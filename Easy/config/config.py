@@ -1,10 +1,17 @@
+#!/usr/bin/env python
+
 import os
 
 
 class Config():
     """
-    基本配置
+
+    Basic config for Easy
     """
+
+
+
+
     # Application config
     DEBUG = True
     VAL_HOST = os.getenv('VAL_HOST', 'true')
@@ -30,7 +37,14 @@ class Config():
     BAIDU_RN = 15
     SO_URL = "https://www.so.com/s"
     BY_URL = "https://www.bing.com/search"
+    DUCKGO_URL = "https://duckduckgo.com/html"
 
     REMOTE_SERVER = {
         'proxy_server': 'http://0.0.0.0:8002/'
     }
+
+
+    REMOTE_SERVER = {
+        'proxy_server': 'http://0.0.0.0:8002/'
+    }
+

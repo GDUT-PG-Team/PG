@@ -89,9 +89,9 @@ class PyMongoDb:
     _db = None
     MONGODB = {
         'MONGO_HOST': '127.0.0.1',
-        'MONGO_PORT': '',
-        'MONGO_USERNAME': '',
-        'MONGO_PASSWORD': '',
+        'MONGO_PORT': '27017',
+        'MONGO_USERNAME': 'admin',
+        'MONGO_PASSWORD': '123456',
         'DATABASE': 'Easy'
     }
 
