@@ -16,7 +16,7 @@ from Easy.config import CONFIG, LOGGER
 
 def authenticator(key):
     """
-    :param keys: 验证方式 Owllook-Api-Key : Magic Key,  Authorization : Token
+    :param keys: 验证方式 Easy-Api-Key : Magic Key,  Authorization : Token
     :return: 返回值
     """
 

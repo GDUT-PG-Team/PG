@@ -3,7 +3,7 @@ import random
 
 from ruia import Request
 
-from owllook.config import CONFIG
+from Easy.config import CONFIG
 
 
 async def get_proxy_ip(valid: int = 1) -> str:

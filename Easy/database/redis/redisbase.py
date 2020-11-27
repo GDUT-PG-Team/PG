@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import asyncio_redis
 
-from owllook.config import CONFIG
+from Easy.config import CONFIG
 
 
 # Token from https://github.com/subyraman/sanic_session
